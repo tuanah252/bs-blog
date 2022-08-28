@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#container {
+    height: 10000px;
+}
+
+
+.icon-bs {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar {
+    display: grid !important;
+    grid-template-columns: 50px 100px 1fr 0.65fr;
+}
+
+.btn-lg {
+    width: 100px;
+}
+
+.title {
+
+    grid-column: 3/4;
+    text-align: center;
+    font-family: 'DynaPuff', serif;
+    font-size: 30px;
+    background: linear-gradient(to right, #065993 1%, #01ef96 50%, #065993 90%);
+    background-size: 200% auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: animate 2s linear infinite;
+
+}
+
+.navbar-brand {
+    grid-column: 2/3;
+}
+
+.search-in {
+    display: flex;
+    justify-content: space-evenly;
+    right: 0px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 65px;
+    grid-template-areas:
+        'aa aa aa aa '
+        'bb cc cc cc '
+        'bb cc cc cc ';
+}
+
+#header {
+    grid-area: aa;
+}
+
+#main {
+    grid-area: cc;
+
+}
+
+#container {
+    background-image: url(./img/5172066.jpg);
+}
+
+#sidebar {
+    grid-area: bb;
+    position: fixed;
+    opacity: 0.9;
+}
+
+.blog-img {
+    display: flex;
+    flex-direction: row;
+}
+
+#post-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.post {
+    margin-left: 70px;
+    padding: 10px;
+}
+
+.post-head {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-left: 5px solid gray;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.post-body {
+    margin-left: 50px;
+
+}
+
+.post-body-elements {
+    margin-bottom: 0;
+    margin-top: 16px;
+    border-bottom: 2px solid gray;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#sign-in {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+    position: fixed;
+    justify-content: center;
+    top: 8%;
+    left: 35%;
+    background-color: white;
+    width: 500px;
+    height: 800px;
+    /* opacity: 0.5; */
+    z-index: 10;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
+
+#signin.active {
+    transform: scale(1);
+}
+
+.close-button {
+    max-width: 20px;
+    max-height: 24px;
+    top: 0px;
+    gap: 50px;
+    padding: 5px;
+    background-color: white;
+}
+
+.form-signin {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 550px;
+    padding: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+#subform {
+    display: flex;
+    flex-direction: column;
+    width: 400px !important;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#subform img {
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-floating {
+    width: 400px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 0.6;
+    pointer-events: all;
+    transition: 200ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+@keyframes animate {
+    to {
+        background-position: 200% center;
+    }
+}
