@@ -167,11 +167,11 @@ a {
     user-select: none;
 }
 
-#sign-in {
+#sign-in-pop-up {
+    position: absolute;
     display: flex;
     padding-top: 10px;
     padding-bottom: 40px;
-
     position: fixed;
     justify-content: center;
     top: 8%;
@@ -180,13 +180,72 @@ a {
     width: 500px;
     height: 800px;
     /* opacity: 0.5; */
-    z-index: 10;
+
+    z-index: 200;
     transform: scale(0);
     transition: 200ms ease-in-out;
 }
 
-#signin.active {
+#sign-up-pop-up {
+    position: absolute;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    position: fixed;
+    justify-content: center;
+    top: 8%;
+    left: 35%;
+    background-color: white;
+    width: 500px;
+    height: 800px;
+    /* opacity: 0.5; */
+
+    z-index: 200;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.sign-in {
+    width: 74.39px;
+    height: 38.21px;
+    font-size: 16px !important;
+    text-align: center !important;
+    padding: 5px !important;
+}
+
+.sign-up {
+    width: 74.39px;
+    height: 38.21px;
+    font-size: 16px !important;
+    text-align: center !important;
+    padding: 5px !important ;
+}
+
+#sign-in-pop-up.active {
     transform: scale(1);
+}
+
+#sign-up-pop-up.active {
+    transform: scale(1);
+}
+
+#overlay {
+    position: absolute;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#overlay.active {
+    display: block;
+    opacity: 0.6;
+    transition: 200ms ease-in-out;
 }
 
 .close-button {
@@ -248,21 +307,7 @@ a {
     width: 400px;
 }
 
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0);
-    pointer-events: none;
-}
 
-#overlay.active {
-    opacity: 0.6;
-    pointer-events: all;
-    transition: 200ms ease-in-out;
-}
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {

@@ -27,8 +27,8 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <div class="button">
-                        <button type="button" class="btn btn-primary btn-lg sign-in">Sign-in</button>
-                        <button type="button" class="btn btn-secondary btn-lg sign-up">Sign-up</button>
+                        <button type="button" class="btn btn-primary btn-lg sign-in">Sign in</button>
+                        <button type="button" class="btn btn-secondary btn-lg sign-up">Sign up</button>
                     </div>
                 </div>
 
@@ -231,12 +231,38 @@
 
     </div>
 
-    <div id="sign-in">
+    <div id="sign-in-pop-up">
         <main class="form-signin">
-
             <form id="subform">
                 <img src="./img/bsheeb.png" alt="" width="72" height="57">
-                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                <h1 class="h3 mb-3 fw-normal">Đăng Nhập</h1>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+                    <label for="floatingInput2">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+                    <label for="floatingPassword2">Password</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            </form>
+
+        </main>
+
+    </div>
+
+    <div id="sign-up-pop-up">
+        <main class="form-signin">
+            <form id="subform">
+                <img src="./img/bsheeb.png" alt="" width="72" height="57">
+                <h1 class="h3 mb-3 fw-normal">Đăng Ký Tài Khoản</h1>
 
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -252,15 +278,15 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
             </form>
 
         </main>
 
     </div>
 
-    <div id="overlay"> 
-        
+    <div id="overlay">
+
     </div>
 
 
@@ -277,6 +303,7 @@
     <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="sidebars.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
